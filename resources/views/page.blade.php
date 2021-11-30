@@ -85,66 +85,76 @@
             <div class="d-flex justify-content-between my-3 px-4">
                 <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
                 <img src="{{ asset('images/logo.png') }}" />
-                <a href="#" class="btn btn-warning rounded font-weight-bolder btn-sm b-radius-17">Sign Up!</a>
+                <a href="#" class="btn btn-warning rounded font-weight-bolder btn-sm b-radius-17 align-self-center">Join Morgi</a>
             </div>
            <div class="col-md-5 mx-auto">
+                        
             <!--  -->
-            <div class="card mt-5 bg-darkblue">
-                <img src="{{ asset('images/Logo_Morgi.png') }}" class="card-img" alt="...">
-                <div class="card-img-overlay text-center text-white font-weight-bolder d-flex flex-column">
-                   <h2 class="mt-auto">Get a leg-up</h2>
-                   <h2  class="gardient">when you need one</h2>
-                   <a href="#" class="btn btn-warning rounded font-weight-bolder w-75 mt-4 mx-auto b-radius-17">Get Started it's Free </a>
+            <div class="card mt-5 bg-darkblue">                
+                <div class="card-body text-center text-white ">
+                <h1 class="mt-auto">Looking for an inspriation for your next book ?</h1>
+                   <p class="my-4">{{ settings()->group('default')->get('page_1_header_paragraph') }}</p>
+                   <a href="#" class="btn btn-warning rounded font-weight-bolder w-75 my-3 mx-auto b-radius-17">Become A Leader </a>
+                   <img src="{{ asset('images/img1.png') }}" class="card-img-top w-75 mx-auto" alt="..." />
                 </div>
             </div>
 
-            <!--  -->
-            <div class="card bg-darkblue mt-4" >                
-                <div class="card-body">
-                    <p class="card-text  text-white text-center font-size-lg h5  px-5">Join 1000s of rookies that are getting the tools for success</p>
+
+            <div class="card mt-2 bg-darkblue">                
+                <div class="card-body text-center  ">
+                    <h1 class="mt-auto text-black font-weight-bolder">Get Connected</h1>
+                   <p class="my-4">{{ settings()->group('default')->get('page_1_header_paragraph') }}</p>                   
+                   <img src="{{ asset('images/img1.png') }}" class="card-img-top w-75 mx-auto my-3" alt="..." />
+                   <a href="#" class="btn btn-warning rounded font-weight-bolder w-75 my-3 mx-auto b-radius-17">Become A Leader </a>
                 </div>
-                <!--  -->
-                <img src="{{ asset('images/img1.png') }}" class="card-img-top w-75 mx-auto" alt="..." />
             </div>
 
-
-             <!--  -->
-             <div class="card bg-darkblue mt-5" >                
-                <!--  -->
-                <img src="{{ asset('images/icon_noexperience.png') }}" class="img-fluid w-25 mx-auto" alt="..." />
-
-                <div class="card-body">
-                    <p class="card-text  text-white text-center w-75 mx-auto text-center">We all need help from time to time. At Morgi you will find the help you need.</p>
-                </div>                
-            </div>
-
-
-             <!--  -->
-             <div class="card bg-darkblue mt-5" >                
-                <!--  -->
-                <img src="{{ asset('images/icon_noexperience.png') }}" class="img-fluid w-25 mx-auto" alt="..." />
-
-                <div class="card-body">
-                    <p class="card-text  text-white text-center w-75 mx-auto text-center">Leaders from around the world are ready to lend a helping hand: Monthly recurring gift and support, tips, a bit of advice, and mentorship.</p>
-                </div>                
-            </div>
-
-
-             <!--  -->
-             <div class="card bg-darkblue mt-5" >                
-                <!--  -->
-                <img src="{{ asset('images/icon_noexperience.png') }}" class="img-fluid w-25 mx-auto" alt="..." />
-
-                <div class="card-body">
-                    <p class="card-text  text-white text-center w-75 mx-auto text-center">With Morgi, you get to have fun hanging out with rookies like you, hosting parties, and more. All you need is to want it.</p>
-                </div>                
-            </div>
 
             <!--  -->
-            <div class="d-flex flex-column justify-content-center">
-                <a href="#" class="btn btn-warning rounded font-weight-bolder mt-4 mx-auto b-radius-17">Get Started it's Free </a>
-                <small class="text-muted w-75 mx-auto text-center px-4 mt-4">By clicking ‘Sign up’ you state that you agree to our Terms & Conditions and Privacy policy</small>
-                <small class="text-muted w-75 mx-auto text-center px-4 mt-4">Morgi 2021 All Rights Reserved</small>
+            <div class="card bg-darkblue mt-2 text-center" >                
+                <div class="card-body">
+                    <h2 class="mt-auto mb-4">How it works</h2>
+                    <!--  -->
+                    <h6>Join Morgi as a leader</h6>
+                    <p class="card-text  text-white text-center font-size-lg h5  px-5">{{ settings()->group('default')->get('page_1_header_paragraph') }}</p>
+
+                    <!--  -->
+                    <h6 class="mt-4">Explore Cookies profiles</h6>
+                    <p class="card-text  text-white text-center font-size-lg h5  px-5">{{ settings()->group('default')->get('page_1_header_paragraph') }}</p>
+
+                    <!--  -->
+                    <h6 class="mt-4">Get Connected</h6>
+                    <p class="card-text  text-white text-center font-size-lg h5  px-5">{{ settings()->group('default')->get('page_1_header_paragraph') }}</p>
+
+                </div>               
+            </div>
+
+
+             <!--  -->
+             <div class="card bg-darkblue mt-5 text-center" >                
+                <!--  -->
+                <h2 class="px-4">The Morgi.org Leaders Network </h2>
+                <div class="card-body">
+                    <p class="card-text  text-white text-center w-75 mx-auto text-center">{{ settings()->group('default')->get('page_1_noexperience_paragraph') }}</p>
+                </div>                
+            </div>
+
+
+            
+             <!--  -->
+             <div class="card bg-darkblue mt-5" >                
+                <!--  -->                
+                <div class="card-body text-center">
+                    <h5>Giving is better than recieving. Because giving starts the receiving process. - Jim Rohn</h5>                    
+                </div>                
+            </div>
+
+
+            <!--  -->
+            <div class="d-flex flex-column justify-content-center">         
+                <a href="#" class="btn btn-warning rounded font-weight-bolder w-75 my-3 mx-auto b-radius-17">Join Morgi </a>       
+                <small class="text-muted w-75 mx-auto text-center px-4 mt-4">{{ settings()->group('default')->get('privacy_policy') }}</small>
+                <small class="text-muted w-75 mx-auto text-center px-4 mt-4">{{ settings()->group('default')->get('term_and_condition') }}</small>
             </div>
 
             <div class="d-flex w-50 my-4 mx-auto justify-content-between">

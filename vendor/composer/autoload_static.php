@@ -35,7 +35,9 @@ class ComposerStaticInitb18bab256dff555ef76a56d7ea1afcd0
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '98d15107539f263950011af925f9c349' => __DIR__ . '/..' . '/qcod/laravel-settings/src/helpers.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        'b8f016a5e1054c944175a1c164ac147a' => __DIR__ . '/..' . '/qcod/laravel-app-settings/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -91,6 +93,11 @@ class ComposerStaticInitb18bab256dff555ef76a56d7ea1afcd0
         array (
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
+        ),
+        'Q' => 
+        array (
+            'QCod\\Settings\\' => 14,
+            'QCod\\AppSettings\\' => 17,
         ),
         'P' => 
         array (
@@ -323,6 +330,14 @@ class ComposerStaticInitb18bab256dff555ef76a56d7ea1afcd0
         array (
             0 => __DIR__ . '/..' . '/ramsey/collection/src',
         ),
+        'QCod\\Settings\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qcod/laravel-settings/src',
+        ),
+        'QCod\\AppSettings\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qcod/laravel-app-settings/src',
+        ),
         'Psy\\' => 
         array (
             0 => __DIR__ . '/..' . '/psy/psysh/src',
@@ -526,8 +541,17 @@ class ComposerStaticInitb18bab256dff555ef76a56d7ea1afcd0
     );
 
     public static $classMap = array (
+        'AddGroupColumnOnSettingsTable' => __DIR__ . '/..' . '/qcod/laravel-settings/src/migrations/2014_10_00_000001_add_group_column_on_settings_table.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
+        'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
+        'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
+        'App\\Http\\Controllers\\Auth\\EmailVerificationPromptController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationPromptController.php',
+        'App\\Http\\Controllers\\Auth\\NewPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/NewPasswordController.php',
+        'App\\Http\\Controllers\\Auth\\PasswordResetLinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordResetLinkController.php',
+        'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
+        'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -538,12 +562,15 @@ class ComposerStaticInitb18bab256dff555ef76a56d7ea1afcd0
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
+        'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -636,6 +663,7 @@ class ComposerStaticInitb18bab256dff555ef76a56d7ea1afcd0
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'CreateSettingsTable' => __DIR__ . '/..' . '/qcod/laravel-settings/src/migrations/2014_10_00_000000_create_settings_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -4272,6 +4300,16 @@ class ComposerStaticInitb18bab256dff555ef76a56d7ea1afcd0
         'Psy\\VersionUpdater\\GitHubChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/GitHubChecker.php',
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
+        'QCod\\AppSettings\\AppSettingsServiceProvider' => __DIR__ . '/..' . '/qcod/laravel-app-settings/src/AppSettingsServiceProvider.php',
+        'QCod\\AppSettings\\Controllers\\AppSettingController' => __DIR__ . '/..' . '/qcod/laravel-app-settings/src/Controllers/AppSettingController.php',
+        'QCod\\AppSettings\\Facade' => __DIR__ . '/..' . '/qcod/laravel-app-settings/src/Facade.php',
+        'QCod\\AppSettings\\SavesSettings' => __DIR__ . '/..' . '/qcod/laravel-app-settings/src/SavesSettings.php',
+        'QCod\\AppSettings\\Setting\\AppSettings' => __DIR__ . '/..' . '/qcod/laravel-app-settings/src/Setting/AppSettings.php',
+        'QCod\\Settings\\Facade' => __DIR__ . '/..' . '/qcod/laravel-settings/src/Facade.php',
+        'QCod\\Settings\\Setting\\Setting' => __DIR__ . '/..' . '/qcod/laravel-settings/src/Setting/Setting.php',
+        'QCod\\Settings\\Setting\\SettingEloquentStorage' => __DIR__ . '/..' . '/qcod/laravel-settings/src/Setting/SettingEloquentStorage.php',
+        'QCod\\Settings\\Setting\\SettingStorage' => __DIR__ . '/..' . '/qcod/laravel-settings/src/Setting/SettingStorage.php',
+        'QCod\\Settings\\SettingsServiceProvider' => __DIR__ . '/..' . '/qcod/laravel-settings/src/SettingsServiceProvider.php',
         'Ramsey\\Collection\\AbstractArray' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractArray.php',
         'Ramsey\\Collection\\AbstractCollection' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractCollection.php',
         'Ramsey\\Collection\\AbstractSet' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractSet.php',
@@ -5385,6 +5423,11 @@ class ComposerStaticInitb18bab256dff555ef76a56d7ea1afcd0
         'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
         'Symfony\\Polyfill\\Php81\\Php81' => __DIR__ . '/..' . '/symfony/polyfill-php81/Php81.php',
         'Tests\\CreatesApplication' => __DIR__ . '/../..' . '/tests/CreatesApplication.php',
+        'Tests\\Feature\\Auth\\AuthenticationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/AuthenticationTest.php',
+        'Tests\\Feature\\Auth\\EmailVerificationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/EmailVerificationTest.php',
+        'Tests\\Feature\\Auth\\PasswordConfirmationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/PasswordConfirmationTest.php',
+        'Tests\\Feature\\Auth\\PasswordResetTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/PasswordResetTest.php',
+        'Tests\\Feature\\Auth\\RegistrationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/RegistrationTest.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Tests\\Unit\\ExampleTest' => __DIR__ . '/../..' . '/tests/Unit/ExampleTest.php',

@@ -18,6 +18,15 @@ Route::get('/', function () {
 });
 
 
+Route::get('/page-2', function () {
+    return view('page2');
+});
+
+Route::get('/page-1', function () {
+    return view('page');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
