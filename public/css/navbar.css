@@ -184,6 +184,7 @@ h1, .h1 {
 
 .dashboard-nav a {
     color: #000;
+    border-bottom: solid 1px #e5e5e5;
 }
 
 .brand-logo {
@@ -225,7 +226,7 @@ h1, .h1 {
 }
 
 .dashboard-nav-item {
-    min-height: 56px;
+    min-height: 75px;
     padding: 8px 20px 8px 70px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -435,4 +436,8 @@ h1, .h1 {
     .dashboard-compact .dashboard-toolbar {
         left: 0;
     }
+}
+.active{
+    background: #6f60c138;
+    border-left: 6px solid #5045a1;
 }
