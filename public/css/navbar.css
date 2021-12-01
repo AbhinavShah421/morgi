@@ -28,7 +28,7 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #515151;
+    /* color: #515151; */
     text-align: left;
     background-color: #e9edf4;
 }
@@ -81,7 +81,7 @@ h1, .h1 {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: none;
     border-radius: 0;
 }
 
@@ -440,4 +440,7 @@ h1, .h1 {
 .active{
     background: #6f60c138;
     border-left: 6px solid #5045a1;
+}
+.dashboard-nav-item:hover{
+    background: #6f60c138;
 }

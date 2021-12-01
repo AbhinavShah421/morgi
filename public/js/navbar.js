@@ -39,4 +39,9 @@ $(document).ready(function () {
             $(".dashboard").toggleClass("dashboard-compact");
         }
     });
+
+    $(".dashboard-nav-item").click(function(){
+        $(".dashboard-nav-item").removeClass("active");
+        $(this).addClass("active");
+    })
 });
